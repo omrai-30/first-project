@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Website</title>
+    <style>
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            transition: background 0.5s ease-in-out;
+        }
+
+        /* Header Styling */
+        h1 {
+            color: white;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            margin-top: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            background: #ff6f61;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            background: #ff4e50;
+        }
+
+        /* Content Box */
+        .content {
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Button */
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #6a8caf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #88d8b0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background: #333;
+            color: white;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <h1>Welcome to My Colorful Website</h1>
+
+    <!-- Navigation Menu -->
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2 style="color: #ff4e50;">About Us</h2>
+        <p style="color: #333;">We love making vibrant and engaging websites!</p>
+        <p style="color: #333;">Click the button below to change the background color.</p>
+        
+        <button class="btn" onclick="changeBackground()">Change Color</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 My Colorful Website | All Rights Reserved
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function changeBackground() {
+            const colors = ["#ff9a9e", "#fad0c4", "#ffdde1", "#fbc2eb", "#a18cd1", "#8ec5fc", "#b2fefa"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = `linear-gradient(to right, ${randomColor}, #fad0c4)`;
+        }
+    </script>
+
+</body>
+</html>

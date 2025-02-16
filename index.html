@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explore the World</h1>
+    </header>
+
+    <div class="container">
+        <h2>Popular Destinations</h2>
+        <div id="destinations" class="destinations"></div>
+    </div>
+
+    <div class="booking-form">
+        <h2>Book Your Trip</h2>
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <select id="destinationSelect" required></select>
+            <button type="submit">Book Now</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

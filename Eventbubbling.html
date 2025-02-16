@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child{
+            background-color: aquamarine;
+            border: 4px solid black;
+            padding: 30px;
+            margin: 30px;
+            border-radius: 5px;
+        }
+
+        .childcontainer{
+            background-color: orange;
+            border: 4px solid black;
+            padding: 30px;
+            margin: 30px;
+            border-radius: 5px;
+        }
+
+        .container{
+            background-color: gray;
+            border: 4px solid black;
+            padding: 30px;
+            margin: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                I am vishal
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", () => {
+            //e.stopPropagation()
+            alert("child was clicked")
+            //document.querySelector(".box").innerHTML="<b> hey you were clicked</b> Enjoy your click!"
+        })
+
+        document.querySelector(".childcontainer").addEventListener("click", () => {
+            e.stopPropagation()
+            alert("childcontainer was clicked")
+            //document.querySelector(".box").innerHTML="<b> hey you were clicked</b> Enjoy your click!"
+        })
+
+        document .querySelector("container").addEventListener("click", () => {
+            e.stopPropagation()
+            alert("container was clicked")
+            //document.querySelector(".box").innerHTML="<b> hey you were clicked</b> Enjoy your click!"
+        })
+
+
+    </script>
+</body>
+
+</html>
